@@ -45,59 +45,40 @@
 .carousel-item {
   transition: transform 0.5s ease;
 }
-
-.carousel-control-prev,
-.carousel-control-next {
+.carousel-control-prev, .carousel-control-next {
   width: 5%;
 }
 
 @media (max-width: 767.98px) {
   .d-mobile {
-    display: block !important;
+      display: block !important;
   }
-
   .d-desktop {
-    display: none !important;
+      display: none !important;
   }
-
-  .card img {
-    max-height: 250px;
-    /* Ajusta la altura máxima de las imágenes en dispositivos móviles */
-    object-fit: cover;
-    /* Ajusta cómo se ajusta la imagen dentro de su contenedor */
-  }
-
-  .card-body {
-    font-size: 0.8rem;
-    /* Ajusta el tamaño del texto dentro de las tarjetas en dispositivos móviles */
+  .card-custom {
+      width: 100%; /* Ocupa todo el ancho en dispositivos móviles */
+      max-width: none; /* Remueve la limitación de ancho máximo */
+      margin-bottom: 20px;
   }
 }
 
 @media (min-width: 768px) {
   .d-mobile {
-    display: none !important;
+      display: none !important;
   }
-
   .d-desktop {
-    display: block !important;
+      display: block !important;
   }
-
-  .card {
-    height: 100%;
-    /* Ajusta la altura de las tarjetas en dispositivos de escritorio */
+  .card-custom {
+      width: 22rem; /* Ancho ajustado para pantallas de computadoras */
+      margin: auto;
+      margin-bottom: 20px;
   }
-
-  .card img {
-    max-height: 300px;
-    /* Ajusta la altura máxima de las imágenes en dispositivos de escritorio */
-    object-fit: cover;
-    /* Ajusta cómo se ajusta la imagen dentro de su contenedor */
-  }
-
-  .card-body {
-    font-size: 1rem;
-    /* Ajusta el tamaño del texto dentro de las tarjetas en dispositivos de escritorio */
-  }
+}
+.card-custom img {
+  height: 200px;
+  object-fit: cover;
 }
 /*End Carrusel Cards*/
 
