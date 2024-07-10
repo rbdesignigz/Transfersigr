@@ -1,61 +1,128 @@
 :root {
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #343a40;
-    --primary: #7AB730;
-    --secondary: #f4faec;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --light: #FFFFFF;
-    --dark: #212121;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    --font-family-sans-serif: "Poppins", sans-serif;
-    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  }
-
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #7AB730;
+  --secondary: #f4faec;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #FFFFFF;
+  --dark: #212121;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: "Poppins", sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-/*Inicio de Destinos Turisticos*/
-#nuestros-programas{
-    font-family: 'Poppins', sans-serif;
-    margin:0; padding:0;
-    box-sizing: border-box;
-    outline: none; border:none;
-    text-decoration: none;
-    transition: .2s linear;
+/*Enlace Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+
+
+/*Star Carrusel Cards*/
+.carousel-item {
+  transition: transform 0.5s ease;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+@media (max-width: 767.98px) {
+  .d-mobile {
+    display: block !important;
   }
-  
-  #nuestros-programas{
-    background-color: #fff;
-    padding:15px 9%;
-    padding-bottom: 100px;
-    width: 100%;
+
+  .d-desktop {
+    display: none !important;
   }
-  
-  /*#nuestros-programas .heading{
+
+  .card img {
+    max-height: 250px;
+    /* Ajusta la altura máxima de las imágenes en dispositivos móviles */
+    object-fit: cover;
+    /* Ajusta cómo se ajusta la imagen dentro de su contenedor */
+  }
+
+  .card-body {
+    font-size: 0.8rem;
+    /* Ajusta el tamaño del texto dentro de las tarjetas en dispositivos móviles */
+  }
+}
+
+@media (min-width: 768px) {
+  .d-mobile {
+    display: none !important;
+  }
+
+  .d-desktop {
+    display: block !important;
+  }
+
+  .card {
+    height: 100%;
+    /* Ajusta la altura de las tarjetas en dispositivos de escritorio */
+  }
+
+  .card img {
+    max-height: 300px;
+    /* Ajusta la altura máxima de las imágenes en dispositivos de escritorio */
+    object-fit: cover;
+    /* Ajusta cómo se ajusta la imagen dentro de su contenedor */
+  }
+
+  .card-body {
+    font-size: 1rem;
+    /* Ajusta el tamaño del texto dentro de las tarjetas en dispositivos de escritorio */
+  }
+}
+/*End Carrusel Cards*/
+
+
+
+/*Star Destinos Turisticos*/
+#nuestros-programas {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: .2s linear;
+}
+
+#nuestros-programas {
+  background-color: #fff;
+  padding: 15px 9%;
+  padding-bottom: 100px;
+  width: 100%;
+}
+
+/*#nuestros-programas .heading{
     text-align: center;
     padding-bottom: 15px;
     /*color:#6a6a6a;
@@ -64,102 +131,98 @@
     text-shadow: 0 5px 10px rgba(0,0,0,.2);
   }
   */
-  
-  #nuestros-programas .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap:15px;
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  #nuestros-programas .box-container a{
-    text-decoration: none;
-  }
-  
-  #nuestros-programas .modal-footer a{
-    text-decoration: none;
-    color: #fff;
-  }
-  
-  #nuestros-programas .box-container .box-2{
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.3),
-        rgba(0,0,0,0.3)
-    ) 
-    ,url(./img/destinos-arg.jpg);
-  }
-  
-  #nuestros-programas .box-container .box-3{
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.3),
-        rgba(0,0,0,0.3)
-    ) 
-    ,url(./img/Cataratas\ BR.jpg);
-  }
 
-  #nuestros-programas .box-container .box-1, .box-2, .box-3{
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.3),
-        rgba(0,0,0,0.3)
-    ) 
-    ,url(./img/destinos-py.jpg);
-    background-size: cover;
-    background-position: center center;
-    text-align: center;
-    padding:60px 40px;
-    margin: 10px;
-    transition: transform 0.6s ease;
-  }
-  
-  #nuestros-programas .box-container .box-1:hover, .box-2:hover, .box-3:hover{
-    transform: scale(1.1);
-  }
-  
-  #nuestros-programas .box-container .box-1 h3{
-    color:#fff;
-    font-size: 22px;
-    padding:10px 0;
-  }
-  
-  #nuestros-programas .box-container .box-2 h3{
-    color:#fff;
-    font-size: 22px;
-    padding:10px 0;
-  }
-  
-  #nuestros-programas .box-container .box-3 h3{
-    color:#fff;
-    font-size: 22px;
-    padding:10px 0;
-  }
-  
-  #nuestros-programas .box-container .modal-body .list-item{
-    display: flex;
-    align-items: center;
-  }
-  
-  @media (max-width: 768px){
-    .container{
-        padding:20px;
-    }
-  }
+#nuestros-programas .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 15px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-/*Fin de Destinos Turisticos*/
+#nuestros-programas .box-container a {
+  text-decoration: none;
+}
 
-.section-hero{
-  background: url(./img/helisur.jpg) no-repeat center;
+#nuestros-programas .modal-footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#nuestros-programas .box-container .box-2 {
+  background-image: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)), url(./img/destinos-arg.jpg);
+}
+
+#nuestros-programas .box-container .box-3 {
+  background-image: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)), url(./img/Cataratas\ BR.jpg);
+}
+
+#nuestros-programas .box-container .box-1,
+.box-2,
+.box-3 {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  background-image: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)), url(./img/destinos-py.jpg);
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  padding: 60px 40px;
+  margin: 10px;
+  transition: transform 0.6s ease;
+}
+
+#nuestros-programas .box-container .box-1:hover,
+.box-2:hover,
+.box-3:hover {
+  transform: scale(1.1);
+}
+
+#nuestros-programas .box-container .box-1 h3 {
+  color: #fff;
+  font-size: 22px;
+  padding: 10px 0;
+}
+
+#nuestros-programas .box-container .box-2 h3 {
+  color: #fff;
+  font-size: 22px;
+  padding: 10px 0;
+}
+
+#nuestros-programas .box-container .box-3 h3 {
+  color: #fff;
+  font-size: 22px;
+  padding: 10px 0;
+}
+
+#nuestros-programas .box-container .modal-body .list-item {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+}
+/*End Destinos Turisticos*/
+
+
+
+/*Star Section Hero*/
+.section-hero {
+  background: url(./img/fondo-6.jpg) no-repeat center;
   background-size: cover;
   width: 100%;
   height: 60vh;
-  
 }
 
-.section-hero::before{
+.section-hero::before {
   content: "";
   position: absolute;
   top: 0;
@@ -168,101 +231,60 @@
   left: 0;
 }
 
-.section-hero .container-section{
+.section-hero .container-section {
   height: 60vh;
   z-index: 1;
   position: relative;
 }
 
-.section-hero h1{
+.section-hero h1 {
   font-size: 1.5rem;
-  padding-top: 300px;
-
 }
+/*End Section Hero*/
 
-/*PIE DE PAGINA*//*PIE DE PAGINA*//*PIE DE PAGINA*//*PIE DE PAGINA*/
 
-#pie-pagina{
+
+/*Star Footer*/
+#pie-pagina {
   width: 100%;
   background-color: black;
   font-family: 'Open Sans', sans-serif;
 }
 
-#pie-pagina .grupo-1{
+#pie-pagina .grupo-1 {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   flex-direction: column;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap:50px;
+  grid-gap: 50px;
   padding: 45px 0px;
 }
 
-#pie-pagina .grupo-1 .box h2{
+#pie-pagina .grupo-1 .box h2 {
   color: #fff;
   margin-bottom: 25px;
   font-size: 20px;
 }
 
-#pie-pagina .grupo-1 .box p{
+#pie-pagina .grupo-1 .box p {
   color: #efefef;
   margin-bottom: 10px;
 }
 
-#pie-pagina .grupo-2{
+#pie-pagina .grupo-2 {
   background-color: rgb(4, 4, 4);
   padding: 15px 10px;
   text-align: center;
   color: #fff;
 }
 
-#pie-pagina .grupo-2 small{
+#pie-pagina .grupo-2 small {
   font-size: 15px;
 }
 
-#pie-pagina .bernidesign{
+#pie-pagina .bernidesign {
   text-decoration: none;
 }
-
-
-.carousel-item {
-  transition: transform 0.5s ease;
-}
-.carousel-control-prev, .carousel-control-next {
-  width: 5%;
-}
-@media (max-width: 767.98px) {
-  .d-mobile {
-      display: block !important;
-  }
-  .d-desktop {
-      display: none !important;
-  }
-  .card img {
-      max-height: 250px; /* Ajusta la altura máxima de las imágenes en dispositivos móviles */
-      object-fit: cover; /* Ajusta cómo se ajusta la imagen dentro de su contenedor */
-  }
-  .card-body {
-      font-size: 0.8rem; /* Ajusta el tamaño del texto dentro de las tarjetas en dispositivos móviles */
-  }
-}
-
-@media (min-width: 768px) {
-  .d-mobile {
-      display: none !important;
-  }
-  .d-desktop {
-      display: block !important;
-  }
-  .card {
-      height: 100%; /* Ajusta la altura de las tarjetas en dispositivos de escritorio */
-  }
-  .card img {
-      max-height: 300px; /* Ajusta la altura máxima de las imágenes en dispositivos de escritorio */
-      object-fit: cover; /* Ajusta cómo se ajusta la imagen dentro de su contenedor */
-  }
-  .card-body {
-      font-size: 1rem; /* Ajusta el tamaño del texto dentro de las tarjetas en dispositivos de escritorio */
-  }
-}
+/*End Footer*/
