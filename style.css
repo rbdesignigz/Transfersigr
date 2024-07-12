@@ -40,50 +40,6 @@
 }
 
 
-
-/*Star Carrusel Cards*/
-.carousel-item {
-  transition: transform 0.5s ease;
-}
-.carousel-control-prev, .carousel-control-next {
-  width: 5%;
-}
-
-@media (max-width: 767.98px) {
-  .d-mobile {
-      display: block !important;
-  }
-  .d-desktop {
-      display: none !important;
-  }
-  .card-custom {
-      width: 100%; /* Ocupa todo el ancho en dispositivos móviles */
-      max-width: none; /* Remueve la limitación de ancho máximo */
-      margin-bottom: 20px;
-  }
-}
-
-@media (min-width: 768px) {
-  .d-mobile {
-      display: none !important;
-  }
-  .d-desktop {
-      display: block !important;
-  }
-  .card-custom {
-      width: 22rem; /* Ancho ajustado para pantallas de computadoras */
-      margin: auto;
-      margin-bottom: 20px;
-  }
-}
-.card-custom img {
-  height: 200px;
-  object-fit: cover;
-}
-/*End Carrusel Cards*/
-
-
-
 /*Star Destinos Turisticos*/
 #nuestros-programas {
   font-family: 'Poppins', sans-serif;
@@ -194,7 +150,6 @@
 /*End Destinos Turisticos*/
 
 
-
 /*Star Section Hero*/
 .section-hero {
   background: url(./img/fondo-6.jpg) no-repeat center;
@@ -224,8 +179,58 @@
 /*End Section Hero*/
 
 
+/*Star Carrusel Cards*/
+.carousel-inner {
+  padding-bottom: 40px;
+}
 
-/*Star Footer*/
+.carousel-item {
+  transition: transform 0.5s ease;
+}
+.carousel-control-prev, .carousel-control-next {
+  width: 5%;
+}
+
+@media (max-width: 767.98px) {
+  .d-mobile {
+    display: block !important;
+  }
+  .d-desktop {
+    display: none !important;
+  }
+  .card-custom {
+    width: 100%; /* Ocupa todo el ancho en dispositivos móviles */
+    max-width: none; /* Remueve la limitación de ancho máximo */
+    margin-bottom: 20px;
+  }
+  .card-custom .card-body,
+  .card-custom .list-group-item,
+  .card-custom .card-link {
+    font-size: 0.9em; /* Ajusta el tamaño de la fuente en dispositivos móviles */
+  }
+}
+
+@media (min-width: 768px) {
+  .d-mobile {
+    display: none !important;
+  }
+  .d-desktop {
+    display: block !important;
+  }
+  .card-custom {
+    width: 24rem; /* Ancho ajustado para pantallas de computadoras */
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}
+.card-custom img {
+  height: 200px;
+  object-fit: cover;
+}
+/*End Carrusel Cards*/
+
+
+/* Star Footer */
 #pie-pagina {
   width: 100%;
   background-color: black;
@@ -238,8 +243,6 @@
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 50px;
   padding: 45px 0px;
 }
 
@@ -265,7 +268,8 @@
   font-size: 15px;
 }
 
-#pie-pagina .bernidesign {
+#pie-pagina .rbdesign {
   text-decoration: none;
+  color: #007bff;
 }
-/*End Footer*/
+/* End Footer */
